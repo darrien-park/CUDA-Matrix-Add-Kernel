@@ -109,7 +109,7 @@ int main(){
 
 	cudaMemcpy(GPUsum, d_sum, size, cudaMemcpyDeviceToHost);
 
-	//CPU calculation
+	//CPU calculation runs asynchronously with GPU
 	cudaEvent_t CPUstart, CPUstop;
 	cudaEventCreate(&CPUstart);
 	cudaEventCreate(&CPUstop);
